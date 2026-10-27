@@ -1,0 +1,28 @@
+digraph G {
+graph [rankdir=LR,bgcolor="white",pad="0.23",nodesep=".38",ranksep=".8",splines=polyline,fontname="Arial",fontsize=17,label="MODELO DE NEGOCIO · VISTA GENERAL",labelloc=t,fontcolor="#153956"];
+node [fontname="Arial",fontsize=11];
+edge [color="#6B8392",arrowsize=.58,penwidth=1.2];
+admin [shape=plaintext,label="♙\nAdministrador /\npropietario",fontcolor="#0E344B",fontsize=10];
+recep [shape=plaintext,label="♙\nRecepcionista",fontcolor="#0E344B",fontsize=10];
+cliente [shape=plaintext,label="♙\nCliente",fontcolor="#0E344B",fontsize=10];
+subgraph cluster_sys {label="Sistema de Digitalización del Control de Membresías";style="rounded,filled";fillcolor="#F3F8F9";color="#ABCAD0";fontcolor="#184459";fontsize=12;penwidth=1.5;
+n0 [shape=ellipse,style=filled,fillcolor="#FFFFFF",color="#2C7D84",fontcolor="#15364D",margin=".2,.11",label="Registrar cliente"];
+n1 [shape=ellipse,style=filled,fillcolor="#FFFFFF",color="#2C7D84",fontcolor="#15364D",margin=".2,.11",label="Verificar membresía"];
+n2 [shape=ellipse,style=filled,fillcolor="#FFFFFF",color="#2C7D84",fontcolor="#15364D",margin=".2,.11",label="Contratar y\nrenovar planes"];
+n3 [shape=ellipse,style=filled,fillcolor="#FFFFFF",color="#2C7D84",fontcolor="#15364D",margin=".2,.11",label="Recibir y\nregistrar pagos"];
+n4 [shape=ellipse,style=filled,fillcolor="#FFFFFF",color="#2C7D84",fontcolor="#15364D",margin=".2,.11",label="Registrar gastos"];
+n5 [shape=ellipse,style=filled,fillcolor="#FFFFFF",color="#2C7D84",fontcolor="#15364D",margin=".2,.11",label="Cerrar jornada"];
+n6 [shape=ellipse,style=filled,fillcolor="#FFFFFF",color="#2C7D84",fontcolor="#15364D",margin=".2,.11",label="Entregar comprobante"];
+}
+admin -> n5 [dir=none];
+recep -> n0 [dir=none];
+recep -> n1 [dir=none];
+recep -> n2 [dir=none];
+recep -> n3 [dir=none];
+recep -> n4 [dir=none];
+recep -> n5 [dir=none];
+recep -> n6 [dir=none];
+cliente -> n2 [dir=none];
+cliente -> n3 [dir=none];
+cliente -> n6 [dir=none];
+}

@@ -1,0 +1,7 @@
+com\fitlife\data\repository\GimnasioRepositoryImpl.class
+com\fitlife\domain\repository\IGimnasioRepository.class
+com\fitlife\presentation\MainApp$1.class
+com\fitlife\usecase\GestionGimnasioUseCase.class
+com\fitlife\domain\model\Cliente.class
+com\fitlife\presentation\MainApp.class
+com\fitlife\domain\model\MovimientoCaja.class

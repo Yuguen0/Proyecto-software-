@@ -1,0 +1,15 @@
+digraph G {
+graph [rankdir=LR,bgcolor="white",pad="0.23",nodesep=".38",ranksep=".8",splines=polyline,fontname="Arial",fontsize=17,label="RP-01 · SEMÁFORO DE ENTRADA Y CONSULTA",labelloc=t,fontcolor="#153956"];
+node [fontname="Arial",fontsize=11];
+edge [color="#6B8392",arrowsize=.58,penwidth=1.2];
+recep [shape=plaintext,label="♙\nRecepcionista",fontcolor="#0E344B",fontsize=10];
+subgraph cluster_sys {label="Sistema de Digitalización del Control de Membresías";style="rounded,filled";fillcolor="#F3F8F9";color="#ABCAD0";fontcolor="#184459";fontsize=12;penwidth=1.5;
+busca [shape=ellipse,style=filled,fillcolor="#FFFFFF",color="#2C7D84",fontcolor="#15364D",margin=".2,.11",label="Buscar cliente"];
+memb [shape=ellipse,style=filled,fillcolor="#FFFFFF",color="#2C7D84",fontcolor="#15364D",margin=".2,.11",label="Consultar membresía"];
+sema [shape=ellipse,style=filled,fillcolor="#FFFFFF",color="#2C7D84",fontcolor="#15364D",margin=".2,.11",label="Visualizar semáforo"];
+}
+recep -> busca [dir=none];
+recep -> memb [dir=none];
+recep -> sema [dir=none];
+memb -> sema [style=dashed,label="<<include>>",fontsize=9,color="#168F81"];
+}

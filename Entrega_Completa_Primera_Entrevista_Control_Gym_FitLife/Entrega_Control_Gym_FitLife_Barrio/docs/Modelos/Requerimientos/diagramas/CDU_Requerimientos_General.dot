@@ -1,0 +1,25 @@
+digraph G {
+graph [rankdir=LR,bgcolor="white",pad="0.23",nodesep=".38",ranksep=".8",splines=polyline,fontname="Arial",fontsize=17,label="REQUERIMIENTOS · VISTA GENERAL",labelloc=t,fontcolor="#153956"];
+node [fontname="Arial",fontsize=11];
+edge [color="#6B8392",arrowsize=.58,penwidth=1.2];
+admin [shape=plaintext,label="♙\nAdministrador /\npropietario",fontcolor="#0E344B",fontsize=10];
+recep [shape=plaintext,label="♙\nRecepcionista",fontcolor="#0E344B",fontsize=10];
+cliente [shape=plaintext,label="♙\nCliente",fontcolor="#0E344B",fontsize=10];
+msg [shape=plaintext,label="♙\nServicio de mensajería",fontcolor="#0E344B",fontsize=10];
+subgraph cluster_sys {label="Sistema de Digitalización del Control de Membresías";style="rounded,filled";fillcolor="#F3F8F9";color="#ABCAD0";fontcolor="#184459";fontsize=12;penwidth=1.5;
+r0 [shape=ellipse,style=filled,fillcolor="#FFFFFF",color="#2C7D84",fontcolor="#15364D",margin=".2,.11",label="Semáforo de entrada y\nconsulta"];
+r1 [shape=ellipse,style=filled,fillcolor="#FFFFFF",color="#2C7D84",fontcolor="#15364D",margin=".2,.11",label="Administración de planes"];
+r2 [shape=ellipse,style=filled,fillcolor="#FFFFFF",color="#2C7D84",fontcolor="#15364D",margin=".2,.11",label="Registro rápido y\nrenovación"];
+r3 [shape=ellipse,style=filled,fillcolor="#FFFFFF",color="#2C7D84",fontcolor="#15364D",margin=".2,.11",label="Ingresos, gastos y\ncierre"];
+r4 [shape=ellipse,style=filled,fillcolor="#FFFFFF",color="#2C7D84",fontcolor="#15364D",margin=".2,.11",label="Comprobante digital"];
+}
+admin -> r1 [dir=none];
+admin -> r3 [dir=none];
+recep -> r0 [dir=none];
+recep -> r1 [dir=none];
+recep -> r2 [dir=none];
+recep -> r3 [dir=none];
+recep -> r4 [dir=none];
+cliente -> r4 [dir=none];
+msg -> r4 [dir=none];
+}
